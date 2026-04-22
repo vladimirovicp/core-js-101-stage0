@@ -216,8 +216,11 @@ function getTail(arr, n) {
  *    +'20,21,22,23,24\n'
  *    +'30,31,32,33,34'
  */
-function toCsvText(/* arr */) {
-  throw new Error('Not implemented');
+function toCsvText(arr) {
+  // 1. Проходим по каждому ряду (row) массива с помощью map
+  // 2. Превращаем каждый ряд в строку, объединяя элементы запятой (join(','))
+  // 3. Полученный массив строк объединяем в одну строку с разделителем перевода строки (\n)
+  return arr.map((row) => row.join(',')).join('\n');
 }
 
 /**
@@ -383,8 +386,10 @@ function getFalsyValuesCount(/* arr */) {
  *    [ null, undefined, null ], null => 2
  *    [ true, 0, 1, 'true' ], true => 1
  */
-function findAllOccurrences(/* arr, item */) {
-  throw new Error('Not implemented');
+function findAllOccurrences(arr, item) {
+  // Фильтруем массив, оставляя только элементы, равные item
+  // и возвращаем длину полученного массива
+  return arr.filter((el) => el === item).length;
 }
 
 /**
